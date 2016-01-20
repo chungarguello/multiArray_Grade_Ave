@@ -3,6 +3,7 @@ package p1;
 public class Main {
 
     public static void main(String[] args) {
+
         double studentAverage = 0;
         String [] test = {"test1", "test2", "test3"};
         double [] testAverage = new double[3];
@@ -29,7 +30,6 @@ public class Main {
             }
             System.out.println("\n");
         }
-
         //student averages and test averages
         for (int i = 0; i < 4; i++) {
             testAverage[0] += grades[i][0];
@@ -40,14 +40,14 @@ public class Main {
                 studentAverage += grades[i][j];
             }
             studentAverage = (studentAverage / 3);
-            System.out.println(students[i] + " average is: " + studentAverage);
+            System.out.printf(" \n" + students[i] + " average is: %3.1f", studentAverage );
             studentAverage = 0;
         }
         System.out.print("\n");
 
         //print test averages
         for (int i = 0; i < 3; i++) {
-           System.out.println(test[i] + "'s average grade is: " + testAverage[i]/4);
+           System.out.printf("\n" + test[i] + "'s average grade is: %3.1f", testAverage[i]/4);
         }
     }
 }// ends main
